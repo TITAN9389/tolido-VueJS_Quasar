@@ -1,10 +1,11 @@
 const routes = [
   {
     path: "/",
-    component: () => import("layouts/Layout.vue"),
+    component: () => import("layouts/Layout"),
     children: [
-      { path: "", component: () => import("pages/PageTodo.vue") },
-      { path: "/settings", component: () => import("pages/Settings.vue") }
+      { path: "", component: () => import("pages/PageTodo") },
+      { path: "/settings", component: () => import("pages/Settings") },
+      { path: "/about", component: () => import("pages/About") }
     ]
   }
 ];
@@ -13,7 +14,7 @@ const routes = [
 if (process.env.MODE !== "ssr") {
   routes.push({
     path: "*",
-    component: () => import("pages/Error404.vue")
+    component: () => import("pages/Error404")
   });
 }
 
