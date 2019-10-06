@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="hHh lpR fFf">
     <q-header elevated class="glossy">
       <q-toolbar>
         <q-btn
@@ -11,11 +11,9 @@
           aria-label="Menu"
         />
 
-        <q-toolbar-title>
+        <q-toolbar-title class="absolute-center">
           ToDos App
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -93,3 +91,12 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+.test {
+  color: red;
+  > div {
+    color: blue;
+  }
+}
+</style>
